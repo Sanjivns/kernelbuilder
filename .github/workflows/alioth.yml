@@ -17,7 +17,6 @@ jobs:
       - uses: actions/checkout@v3
       - name: Build Kernel Alioth
         run: sudo apt-get update -y && bash clone.sh && cd kernel/ && bash kbuild.sh alioth null
-        env:
       - name: Release
         if: success()
         uses: softprops/action-gh-release@v1

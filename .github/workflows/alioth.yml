@@ -1,5 +1,5 @@
-name: Potato Kernel Alioth
-run-name: Potato Kernel Alioth
+name: Mango Kernel Alioth
+run-name: Mango Kernel Alioth
 
 on:
   push:

@@ -18,5 +18,17 @@ jobs:
       - name: Build Kernel Alioth
         run: sudo apt-get update -y && bash clone.sh && cd kernel/ && bash kbuild.sh alioth null
         env:
-           token: ${{ secrets.TOKEN }}
-           chat_id: ${{ secrets.CHAT_ID }}
+      - name: Release
+        if: success()
+        uses: softprops/action-gh-release@v1
+        with:
+          name: "test=1"
+          files: |
+            ${{ env.ZIP_NAME }}.zip
+          tag_name: ${{ github.run_id }}
+          
+      - name: Delete workflow runs
+        uses: Mattraks/delete-workflow-runs@v2
+        with:
+          retain_days: 0
+          keep_minimum_runs: 2

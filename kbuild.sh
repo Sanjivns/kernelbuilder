@@ -4,7 +4,7 @@
  # Script For Building Android Kernel
 
 #ksu
-curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -s v0.9.3
+git submodule init && git submodule update
 
 # Specify Kernel Directory
 KERNEL_DIR="$(pwd)"
@@ -21,7 +21,7 @@ DEVICE=$1
 
 VERSION=BETA
 if [ "${DEVICE}" = "alioth" ]; then
-DEFCONFIG=alioth_defconfig
+DEFCONFIG=vendor/alioth_defconfig
 MODEL="Poco F3"
 elif [ "${DEVICE}" = "lmi" ]; then
 DEFCONFIG=lmi_defconfig
@@ -53,8 +53,8 @@ DATE=$(TZ=Asia/Dhaka date +"%Y%m%d-%T")
 TM=$(date +"%F%S")
 
 # Specify Final Zip Name
-ZIPNAME=Redline
-FINAL_ZIP=${ZIPNAME}-KSU-${DEVICE}-KERNEL-AOSP-${TM}.zip
+ZIPNAME=nO
+FINAL_ZIP=${ZIPNAME}-${DEVICE}-KERNEL-AOSP-${TM}.zip
 
 
 # Specify compiler [ proton, nexus, aosp ]
@@ -139,7 +139,7 @@ function cloneTC() {
 }
         # Clone AnyKernel
       if [ ! -d "AnyKernel3" ]; then
-    git clone --depth=1 https://github.com/levi3609/AnyKernel3 -b redline AnyKernel3
+    git clone --depth=1 https://github.com/levi3609/AnyKernel3 -b n0 AnyKernel3
       fi
 	
 # Export Variables

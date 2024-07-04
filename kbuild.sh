@@ -162,8 +162,8 @@ function exports() {
         export SUBARCH=arm64
                
         # KBUILD HOST and USER
-        export KBUILD_BUILD_HOST=Potato
-        export KBUILD_BUILD_USER="nhAsif"
+        export KBUILD_BUILD_HOST=Mango
+        export KBUILD_BUILD_USER="Sanji"
         
         # CI
         if [ "$CI" ]

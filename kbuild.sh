@@ -58,7 +58,7 @@ FINAL_ZIP=${ZIPNAME}-${DEVICE}-KERNEL-AOSP-${TM}.zip
 
 
 # Specify compiler [ proton, nexus, aosp ]
-COMPILER=neutron
+COMPILER=proton
 
 # Clone ToolChain
 function cloneTC() {
@@ -66,7 +66,7 @@ function cloneTC() {
 	case $COMPILER in
 	
 		proton)
-			git clone --depth=1  https://github.com/kdrag0n/proton-clang.git clang
+			git clone --depth=1  https://gitlab.com/crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-r522817.git clang
 			PATH="${KERNEL_DIR}/clang/bin:$PATH"
 			;;
 		

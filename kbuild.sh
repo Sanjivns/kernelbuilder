@@ -53,7 +53,7 @@ DATE=$(TZ=Asia/Dhaka date +"%Y%m%d-%T")
 TM=$(date +"%F%S")
 
 # Specify Final Zip Name
-ZIPNAME=e404
+ZIPNAME=e404mod
 FINAL_ZIP=${ZIPNAME}-${DEVICE}-KERNEL-AOSP-${TM}.zip
 
 
@@ -139,7 +139,7 @@ function cloneTC() {
 }
         # Clone AnyKernel
       if [ ! -d "AnyKernel3" ]; then
-    git clone https://github.com/Sanjivns/AnyKernel3.git -b nO AnyKernel3
+    git clone https://github.com/Sanjivns/AnyKernel3.git -b e404 AnyKernel3
       fi
 	
 # Export Variables

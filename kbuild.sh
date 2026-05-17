@@ -162,7 +162,7 @@ function exports() {
         export SUBARCH=arm64
                
         # KBUILD HOST and USER
-        export KBUILD_BUILD_HOST=Mango
+        export KBUILD_BUILD_HOST=Arch-btw
         export KBUILD_BUILD_USER="Sanji"
         
         # CI

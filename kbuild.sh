@@ -21,7 +21,7 @@ DEVICE=$1
 
 VERSION=BETA
 if [ "${DEVICE}" = "alioth" ]; then
-DEFCONFIG=vendor/alioth_defconfig
+DEFCONFIG=vendor/xiaomi/alioth_defconfig
 MODEL="Poco F3"
 elif [ "${DEVICE}" = "lmi" ]; then
 DEFCONFIG=lmi_defconfig
@@ -53,7 +53,7 @@ DATE=$(TZ=Asia/Dhaka date +"%Y%m%d-%T")
 TM=$(date +"%F%S")
 
 # Specify Final Zip Name
-ZIPNAME=e404mod
+ZIPNAME=RVkernel
 FINAL_ZIP=${ZIPNAME}-${DEVICE}-KERNEL-AOSP-${TM}.zip
 
 
@@ -100,7 +100,7 @@ function cloneTC() {
 	  		echo "  Already Cloned Aosp Clang"
 	  		echo "××××××××××××××××××××××××××××"
 			else
-			export CLANG_VERSION="clang-r547379"
+			export CLANG_VERSION="clang-r563880c"
 			echo "* It's not cloned, cloning it..."
         		mkdir clangB
         		cd clangB || exit
@@ -139,7 +139,7 @@ function cloneTC() {
 }
         # Clone AnyKernel
       if [ ! -d "AnyKernel3" ]; then
-    git clone https://github.com/Sanjivns/AnyKernel3.git -b e404 AnyKernel3
+    git clone https://github.com/Sanjivns/AnyKernel3.git -b rvkernel AnyKernel3
       fi
 	
 # Export Variables

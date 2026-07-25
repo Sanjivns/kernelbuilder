@@ -58,7 +58,7 @@ FINAL_ZIP=${ZIPNAME}-${DEVICE}-KERNEL-AOSP-${TM}.zip
 
 
 # Specify compiler [ proton, nexus, aosp ]
-COMPILER=nex14
+COMPILER=aosp22
 
 # Clone ToolChain
 function cloneTC() {
@@ -88,9 +88,9 @@ function cloneTC() {
 			PATH="${KERNEL_DIR}/clang/bin:$PATH"
 			;;
 
-		nex14)
-			git clone --depth=1  https://gitlab.com/crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-r596125.git -b clang
-            git clone https://github.com/LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9.git --depth=1 gcc
+		aosp22)
+			git clone --depth=1  https://gitlab.com/crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-r596125.git aosp22
+                        git clone https://github.com/LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9.git --depth=1 gcc
 			git clone https://github.com/LineageOS/android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9.git  --depth=1 gcc32
 			PATH="${KERNEL_DIR}/clang/bin:$PATH"
 			;;

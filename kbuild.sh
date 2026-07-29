@@ -66,7 +66,7 @@ function cloneTC() {
 	case $COMPILER in
 	
 		proton)
-			git clone --depth=1  https://gitlab.com/crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-r522817.git clang
+			git clone --depth=1  https://gitlab.com/crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-r596125.git clang
 			git clone https://github.com/LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9.git --depth=1 gcc
 			git clone https://github.com/LineageOS/android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9.git  --depth=1 gcc32
 			PATH="${KERNEL_DIR}/clang/bin:$PATH"
